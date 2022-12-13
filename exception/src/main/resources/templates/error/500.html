@@ -1,11 +1,36 @@
-<html style="height: 100%;">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
-    <title>500 (750×600)</title></head>
-<body style="margin: 0px; background: #0e0e0e; height: 100%">
-<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://http.cat/500">
-<div class="py-5 text-center">
-    <h2>500 오류 화면 스프링 부트 제공</h2>
-</div>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>500 오류 화면 스프링 부트 제공</h2>
+    </div>
+
+    <div>
+        <p>오류 화면 입니다.</p>
+    </div>
+
+    <ul>
+        <li>오류 정보</li>
+        <ul>
+            <li th:text="|timestamp: ${timestamp}|"></li>
+            <li th:text="|path: ${path}|"></li>
+            <li th:text="|status: ${status}|"></li>
+            <li th:text="|message: ${message}|"></li>
+            <li th:text="|error: ${error}|"></li>
+            <li th:text="|exception: ${exception}|"></li>
+            <li th:text="|errors: ${errors}|"></li>
+            <li th:text="|trace: ${trace}|"></li>
+        </ul>
+        </li>
+    </ul>
+
+    <hr class="my-4">
+
+</div> <!-- /container -->
 </body>
 </html>
+
